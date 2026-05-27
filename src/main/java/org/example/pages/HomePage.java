@@ -33,6 +33,15 @@ public class HomePage extends BasePage {
     @FindBy(linkText = "Sortable Data Tables")
     private WebElement tablesLink;
 
+    @FindBy(linkText = "JavaScript onload event error")
+    private WebElement jsErrorLink;
+
+    @FindBy(linkText = "Drag and Drop")
+    private WebElement dragAndDropLink;
+
+    @FindBy(linkText = "Infinite Scroll")
+    private WebElement infiniteScrollLink;
+
     public HomePage(WebDriver driver) {
         super(driver);
     }
@@ -74,5 +83,17 @@ public class HomePage extends BasePage {
     }
     public void  navigateToDataTables() {
         tablesLink.click();
+    }
+
+    public void navigateToJSErrorPage() {
+            jsErrorLink.click();
+    }
+
+    public void navigateToDragAndDrop() {
+        dragAndDropLink.click();
+    }
+
+    public void navigateToInfiniteScroll() {
+        infiniteScrollLink.click();
     }
 }
